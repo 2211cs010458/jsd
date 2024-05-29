@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Images</title>
+    <style>
+        body {
+            background-color: #414141;
+            color: #fff;
+        }
+        ul#Images {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0;
+        }
+        ul#Images li {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="Images">
+            
+            <li><img width="350px" id="hampi" src="https://assets.traveltriangle.com/blog/wp-content/uploads/2016/08/Untitled-design-95.jpg" alt="HAMPI" ></li>
+            <li><img width="350px" id="Golden-Temple-Amritsar" src="https://assets.traveltriangle.com/blog/wp-content/uploads/2016/08/Golden-Temple-Amritsar.jpg" alt="Golden-Temple-Amritsar "></li>
+            <li><img width="350px" id="khajuraho-temple-2" src="https://assets.traveltriangle.com/blog/wp-content/uploads/2016/08/khajuraho-temple-2.jpg" alt="khajuraho-temple-2" ></li>
+            
+        
+            <li><img width="350px" id="Suntemple-Konark" src="https://assets.traveltriangle.com/blog/wp-content/uploads/2016/11/Suntemple-Konark.jpg" alt="Suntemple-Konark" ></li>
+            <li><img width="350px" id="Nalanda" src="https://assets.traveltriangle.com/blog/wp-content/uploads/2016/11/Nalanda-University-The-ruins-of-Nalanda-Mahavihara-at-the-Nalanda-University-excavation-site.jpg" alt="Nalanda" ></li>
+            <li><img width="350px" id="Gomateshwar" src="https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/12/Konark-Sun-temple.webp" alt="Gomateshwar" ></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id = "google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+//  document.getElementById('HAMPI').onclick = function(){
+//     alert("hampi clicked")
+//  }
+
+// type , timestamp, defaultPrevented
+// target, toElement, srcElement, currentTarget,
+// clientX, clientY, screenX, screenY
+// altkey, ctrlkey, shiftkey, keyCode
+
+// document.getElementById('Images').addEventListener('click' , function(e){
+//     console.log("clicked inside the ul");
+    
+// } , false)
+// document.getElementById('Golden-Temple-Amritsar').addEventListener('click' , function(e){
+//     console.log("clicked Golden-Temple-Amritsar");
+//     e.stopPropagation()
+// })
+// document.getElementById('google').addEventListener
+// ('click', function(e){
+//     console.log("google clicked");
+//     e.preventDefault()
+//     e.stopPropagation
+// })
+
+document.querySelector('#Images').addEventListener('click', function(e){
+    console.log(e.target);
+    console.log(e.target.parentNode);
+    if (e.target.tagName === 'IMG') {
+        console.log(e.target.id);
+        
+    }
+    let removeIt = e.target.parentNode
+    removeIt.remove()
+    // removeIt.parentNode.removeChild(removeIt)
+})
+
+
+
+
+
+
+
+
+</script>
+</html>
